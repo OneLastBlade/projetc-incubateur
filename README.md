@@ -1,2 +1,3 @@
 "# projetc-incubateur" 
-hello
+/bin
+/obj
