@@ -6,11 +6,11 @@
 
 class RessourceHumaine : public Ressource {
 private:
-    string fonction;
+    std::string fonction;
     vector<Competence> competences;
 
 public:
-    RessourceHumaine(const string& nom, const string& fonction);
+    RessourceHumaine(const std::string& nom, const std::string& fonction);
 
     void ajouterCompetence(const Competence& competence);
 };

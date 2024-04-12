@@ -5,10 +5,10 @@
 
 class RessourceMateriel : public Ressource {
 private:
-    string type;
+    std::string type;
 
 public:
-    RessourceMateriel(const string& nom, const string& type);
+    RessourceMateriel(const std::string& nom, const std::string& type);
 };
 
 #endif // RESSOURCEMATERIEL_H_INCLUDED

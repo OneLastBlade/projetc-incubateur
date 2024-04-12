@@ -1,13 +1,13 @@
 #ifndef RESSOURCE_H_INCLUDED
 #define RESSOURCE_H_INCLUDED
-
+#include <iostream>
 class Ressource {
 protected:
-    string nom;
+    std::string nom;
     bool disponibilite;
 
 public:
-    Ressource(const string& nom,const bool& disponibilite);
+    Ressource(const std::string& nom,const bool& disponibilite);
 
 };
 
