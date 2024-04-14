@@ -27,6 +27,10 @@ public:
 
     void setDate(const Date& _date);
 
+    friend std::ostream& operator<<(std::ostream& os, const Event& event);
+    
+    friend std::istream& operator>>(std::istream& is, Event& event);
+
 };
 
 #endif // EVENT_H
