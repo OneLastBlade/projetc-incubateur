@@ -14,6 +14,8 @@ public:
     User(const std::string& _name, const std::string& _number, const std::string& _address)
         : name(_name), number(_number), address(_address) {}
 
+    virtual ~User() {}
+
     std::string getName();
 
     void setName(const std::string& _name);
@@ -26,7 +28,7 @@ public:
 
     void setAddress(const std::string& _address);
 
-    virtual void display();
+    virtual void display() const = 0;
 };
 
 #endif // USER_H

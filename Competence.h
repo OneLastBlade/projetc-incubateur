@@ -4,10 +4,10 @@
 
 class Competence {
 private:
-    string domaine;
+    std::string domaine;
 
 public:
-    Competence(const string& domaine);
+    Competence(const std::string& domaine);
 
 };
 

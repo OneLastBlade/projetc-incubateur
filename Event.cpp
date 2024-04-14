@@ -5,15 +5,15 @@
 Event::Event(const std::string& _name, const std::string& _place, const Date& _date)
         : name(_name), place(_place), date(_date) {}
 
-const std::string& Event::getName() const {
+std::string Event::getName()  {
     return name;
 }
 
-const std::string& Event::getPlace() const {
+std::string Event::getPlace()  {
     return place;
 }
 
-const Date& Event::getDate() const {
+Date Event::getDate() {
     return date;
 }
 

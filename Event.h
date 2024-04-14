@@ -13,17 +13,20 @@ private:
 public:
     Event(const std::string& _name, const std::string& _place, const Date& _date);
 
-    const std::string& getName();
+    ~Event() {}
 
-    const std::string& getPlace();
+    std::string getName();
 
-    const Date& getDate();
+    std::string getPlace();
+
+    Date getDate();
 
     void setName(const std::string& _name);
 
     void setPlace(const std::string& _place);
 
     void setDate(const Date& _date);
+
 };
 
 #endif // EVENT_H

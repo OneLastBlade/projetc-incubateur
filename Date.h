@@ -12,15 +12,17 @@ private:
 public:
     Date(int _day, int _month, int _year) : day(_day), month(_month), year(_year) {}
 
-    int getDay() const {
+    ~Date() {}
+
+    int getDay() {
         return day;
     }
 
-    int getMonth() const {
+    int getMonth() {
         return month;
     }
 
-    int getYear() const {
+    int getYear() {
         return year;
     }
 
@@ -36,7 +38,7 @@ public:
         year = _year;
     }
 
-    void display() const {
+    void display() {
         std::cout << day << "/" << month << "/" << year << std::endl;
     }
 };

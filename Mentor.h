@@ -13,6 +13,8 @@ public:
            const std::pair<double, double>& _coordinates, const std::string& _domain)
         : User(_name, _number, _address), coordinates(_coordinates), domainExpertise(_domain) {}
 
+    ~Mentor() {}
+
     
 };
 

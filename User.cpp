@@ -3,7 +3,7 @@
 User::User(const std::string& _name, const std::string& _number, const std::string& _address)
         : name(_name), number(_number), address(_address) {}
 
-    std::string User::getName() const {
+    std::string User::getName()  {
         return name;
     }
 
@@ -11,7 +11,7 @@ User::User(const std::string& _name, const std::string& _number, const std::stri
         name = _name;
     }
 
-    std::string User::getNumber() const {
+    std::string User::getNumber()  {
         return number;
     }
 
@@ -19,7 +19,7 @@ User::User(const std::string& _name, const std::string& _number, const std::stri
         number = _number;
     }
 
-    std::string User::getAddress() const {
+    std::string User::getAddress()  {
         return address;
     }
 

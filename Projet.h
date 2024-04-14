@@ -1,15 +1,18 @@
 #ifndef PROJET_H_INCLUDED
 #define PROJET_H_INCLUDED
 
+#include <bits/stdc++.h>
+
+#include"Ressource.h"
 class Projet {
 private:
-    string nom;
-    string objectif;
-    string status;
-
+    std::string nom;
+    std::string objectif;
+    std::string status;
+    std::vector <Ressource*> Ressources;
 
 public:
-    Projet(const string& nom, const string& objectif, const string& status);
+    Projet(const std::string& nom, const std::string& objectif, const std::string& status);
 };
 
 #endif // PROJET_H_INCLUDED
