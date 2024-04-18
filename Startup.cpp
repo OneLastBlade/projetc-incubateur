@@ -1,6 +1,6 @@
 #include "Startup.h"
 
-
+using namespace std;
 
 
 Startup::Startup(const std::string& _name, int _age, const std::string& _number, const std::string& _address,

@@ -22,6 +22,12 @@ public:
     void display() const override {
         
     }
+    std::pair<double, double>& getCoordinates(){
+        return coordinates;
+    }
+    std::string getDomain(){
+        return domain;
+    }
 };
 
 #endif // STARTUP_H

@@ -18,6 +18,10 @@ public:
         
     }
 
+    std::string getDomain(){
+        return domainExpertise;
+    }
+
     
 };
 
