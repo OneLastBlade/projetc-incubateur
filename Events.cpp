@@ -1,10 +1,11 @@
 #include "Events.h"
 #include <iostream>
 
-std::map<std::string, Event> Events::eventMap;
 
 void Events::addEvent(const std::string& name, const std::string& place, const Date& date) {
-    eventMap[name] = Event(name, place, date);
+    Event a(name,place,date);
+
+    eventMap.insert({name,a});
 }
 
 void Events::deleteEvent(const std::string& name) {
