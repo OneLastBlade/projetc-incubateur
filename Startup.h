@@ -18,7 +18,10 @@ public:
     Startup &operator=(const Startup &other);
     Startup(const Startup &other);
 
-    virtual ~Startup() {}
+    ~Startup() {}
+    void display() const override {
+        
+    }
 };
 
 #endif // STARTUP_H

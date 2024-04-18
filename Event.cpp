@@ -1,7 +1,6 @@
 #include"Event.h"
 
 
-
 Event::Event(const std::string& _name, const std::string& _place, const Date& _date)
         : name(_name), place(_place), date(_date) {}
 
