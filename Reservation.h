@@ -6,7 +6,7 @@
 #include "Event.h"
 #include "Date.h"
 
-#include "Ressource.h"
+#include "Resource.h"
 class Reservation {
 private:
 
@@ -14,11 +14,11 @@ private:
     Projet* projet;
     bool isEvent;
     Event* evenement;
-    Ressource* ressource;
+    Resource* ressource;
 
 public:
-    Reservation(Date date, Projet* projet, Ressource* ressource);
-    Reservation(Date date, Event* evenement, Ressource* ressource);
+    Reservation(Date date, Projet* projet, Resource* ressource);
+    Reservation(Date date, Event* evenement, Resource* ressource);
     bool isThisEvent();
     Date dateEvent();
 };

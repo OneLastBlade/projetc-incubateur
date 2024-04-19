@@ -27,7 +27,6 @@ public:
         Projets.push_back(p);
     }
     
-    
     std::pair<double, double>& getCoordinates(){
         return coordinates;
     }
