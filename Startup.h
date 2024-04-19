@@ -48,6 +48,9 @@ public:
         }
         return sum;
     }
+    std::vector<Projet> getProjectsVector(){
+        return Projets;
+    }
 };
 
 #endif // STARTUP_H
