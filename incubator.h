@@ -51,5 +51,20 @@ class incubator{
     std::list<Mentor> getAllMentors(){
         return mentors;
     }
+
+    void deleteMentorPos(int i){
+        auto it = mentors.begin(); 
+        std::advance(it, i);
+        if(it!= mentors.end()){
+            mentors.erase(it);
+        }
+    }
+    void deleteStartupPos(int i){
+        auto it = startups.begin(); 
+        std::advance(it, i);
+        if(it!= startups.end()){
+            startups.erase(it);
+        }
+    }
 };
 #endif

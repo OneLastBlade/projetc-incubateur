@@ -2,18 +2,24 @@
 #define RESERVATION_H_INCLUDED
 #include <ctime>
 #include <string>
+#include "Projet.h"
+#include "Event.h"
+#include "Date.h"
+#include "Ressource.h"
 class Reservation {
 private:
-    time_t debut;
-    time_t fin;
+
+    Date date;
     Projet* projet;
     bool isEvent;
-    Evenement* evenement;
+    Event* evenement;
     Ressource* ressource;
 
 public:
-    Reservation(time_t debut, time_t fin, Projet* projet, Ressource* ressource);
-    Reservation(time_t debut, time_t fin, Evenement* evenement, Ressource* ressource);
+    Reservation(Date date, Projet* projet, Ressource* ressource);
+    Reservation(Date date, Event* evenement, Ressource* ressource);
+    bool isThisEvent();
+    Date dateEvent();
 };
 
 #endif // RESERVATION_H_INCLUDED

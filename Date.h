@@ -9,6 +9,7 @@ private:
     int year;
 
 public:
+    Date(){}
     Date(int _day, int _month, int _year) : day(_day), month(_month), year(_year) {}
 
     ~Date() {}

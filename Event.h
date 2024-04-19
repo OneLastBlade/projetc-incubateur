@@ -11,6 +11,7 @@ private:
     Date date;
 
 public:
+    Event(){}
     Event(const std::string& _name, const std::string& _place, const Date& _date);
 
     ~Event() {}
