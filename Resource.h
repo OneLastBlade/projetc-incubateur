@@ -4,14 +4,14 @@
 #include "Event.h"
 #include "Projet.h"
 
-class Ressource {
+class Resource {
 protected:
     std::string nom;
     bool disponibilite;
 
 public:
-    Ressource(const std::string& nom,const bool& disponibilite):nom(nom),disponibilite(disponibilite){}
-    ~Ressource(){}
+    Resource(const std::string& nom,const bool& disponibilite):nom(nom),disponibilite(disponibilite){}
+    ~Resource(){}
 
     std::string getName(){
         return nom;

@@ -22,6 +22,12 @@ public:
     void display() const override {
         
     }
+
+    void addProject(const Projet p){
+        Projets.push_back(p);
+    }
+    
+    
     std::pair<double, double>& getCoordinates(){
         return coordinates;
     }

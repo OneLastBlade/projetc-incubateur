@@ -1,14 +1,14 @@
 #ifndef RESSOURCEMATERIEL_H_INCLUDED
 #define RESSOURCEMATERIEL_H_INCLUDED
 
-#include "Ressource.h"
+#include "Resource.h"
 
-class RessourceMateriel : public Ressource {
+class ResourceMateriel : public Resource {
 private:
     std::string type;
 
 public:
-    RessourceMateriel(const std::string& nom, const std::string& type);
+    ResourceMateriel(const std::string& nom, const std::string& type);
 };
 
 #endif // RESSOURCEMATERIEL_H_INCLUDED

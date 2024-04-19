@@ -3,7 +3,7 @@
 
 #include <bits/stdc++.h>
 
-#include "Ressource.h"
+#include "Resource.h"
 
 class Projet
 {
@@ -12,26 +12,26 @@ private:
     float expenses=0,revenue=0;
     std::string objectif;
     std::string status;
-    std::vector<Ressource*> Ressources;
+    std::vector<Resource*> Resources;
 
 public:
     Projet(const std::string &nom, const std::string &objectif, const std::string &status);
 
     ~Projet(){
-        for (auto *ressource : Ressources)
+        for (auto *ressource : Resources)
         {
             delete ressource;
         }
-        Ressources.clear();
+        Resources.clear();
     }
     
     Projet(const Projet &other)
         : nom(other.nom), objectif(other.objectif), status(other.status)
     {
 
-        for (const auto &ressource : other.Ressources)
+        for (const auto &resource : other.Resources)
         {
-            Ressources.push_back(new Ressource(*ressource));
+            Resources.push_back(new Resource(*resource));
         }
     }
     Projet& operator=(const Projet& other);

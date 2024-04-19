@@ -1,10 +1,12 @@
 #include <iostream>
-#include "Startup.h"
+#include "incubator.h"
 using namespace std;
 
 int main()
 {
-    Startup p("startup",25,"2525","adress",{14,15},"domaine");
+    incubator c();
+
+    
     
     return 0;
 }

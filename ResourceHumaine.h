@@ -1,18 +1,18 @@
 #ifndef RESSOURCEHUMAINE_H_INCLUDED
 #define RESSOURCEHUMAINE_H_INCLUDED
-#include "Ressource.h"
+#include "Resource.h"
 #include "Competence.h"
 #include <vector>
 
-class RessourceHumaine : public Ressource {
+class ResourceHumaine : public Resource {
 private:
     std::string nom;
     std::string fonction;
     std::vector<Competence> competences;
 
 public:
-    RessourceHumaine(const std::string& nom, const std::string& fonction);
-    
+    ResourceHumaine(const std::string& nom, const std::string& fonction);
+
     void ajouterCompetence(const Competence& competence);
 };
 

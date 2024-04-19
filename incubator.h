@@ -5,11 +5,13 @@
 #include "Startup.h"
 #include "Mentor.h"
 #include <list>
+#include "Resource.h"
 
 class incubator{
     private:
     std::list<Startup> startups;
     std::list<Mentor> mentors;
+    std::vector <Resource*> resources;
 
     public:
     incubator(){}
@@ -31,6 +33,14 @@ class incubator{
     int mentorSize(){
         return mentors.size();
     }
+
+    void ajoutProjetToStartup(int i , const Projet p){
+        auto it = startups.begin();
+        std::advance(it, i);
+        it->addProject(p);
+    }
+
+
     Startup getStartup(int i){
         if (i < startups.size()) {
             auto it = startups.begin();
