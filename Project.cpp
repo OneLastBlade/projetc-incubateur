@@ -2,26 +2,40 @@
 
 Projet::Projet(const std::string &nom, const std::string &objectif, const std::string &status) : nom(nom), objectif(objectif), status(status) {}
 
-Projet &Projet::operator=(const Projet &other)
-{
-    if (this != &other)
+Projet& Projet::operator=(const Projet& other)
     {
-        nom = other.nom;
-        objectif = other.objectif;
-        status = other.status;
-
-        // Clean up existing Ressources
-        for (auto *ressource : Ressources)
+        if (this != &other) // Check for self-assignment
         {
-            delete ressource;
-        }
-        Ressources.clear();
+            // Copy the non-pointer members
+            nom = other.nom;
+            objectif = other.objectif;
+            status = other.status;
 
-        // Copy Ressources from other
-        for (const auto *ressource : other.Ressources)
-        {
-            Ressources.push_back(new Ressource(*ressource));
+            // Copy the Ressources
+            for (auto *ressource : Ressources)
+            {
+                delete ressource;
+            }
+            Ressources.clear();
+
+            for (const auto *ressource : other.Ressources)
+            {
+                Ressources.push_back(new Ressource(*ressource));
+            }
         }
+
+        return *this;
     }
-    return *this;
-}
+
+    void Projet::addExpense(float a){
+        expenses+=a;
+    }
+    void Projet::addRevenue(float a){
+        revenue+=a;
+    }
+    float Projet::getExpenses(){
+        return expenses;
+    }
+    float Projet::getRevenue(){
+        return revenue;
+    }

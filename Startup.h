@@ -28,6 +28,20 @@ public:
     std::string getDomain(){
         return domain;
     }
+    float getProjectExpenses(){
+        float sum=0;
+        for(auto p:Projets){
+            sum+=p.getExpenses();
+        }
+        return sum;
+    }
+    float getProjectRevenues(){
+        float sum=0;
+        for(auto p:Projets){
+            sum+=p.getRevenue();
+        }
+        return sum;
+    }
 };
 
 #endif // STARTUP_H

@@ -7,13 +7,12 @@
 class RessourceHumaine : public Ressource {
 private:
     std::string nom;
-    bool available;
     std::string fonction;
     std::vector<Competence> competences;
 
 public:
     RessourceHumaine(const std::string& nom, const std::string& fonction);
-
+    
     void ajouterCompetence(const Competence& competence);
 };
 
