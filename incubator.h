@@ -48,5 +48,8 @@ class incubator{
             return *it;
         } 
     }
+    std::list<Mentor> getAllMentors(){
+        return mentors;
+    }
 };
 #endif
