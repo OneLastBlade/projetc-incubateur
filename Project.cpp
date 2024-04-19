@@ -12,15 +12,15 @@ Projet& Projet::operator=(const Projet& other)
             status = other.status;
 
             // Copy the Ressources
-            for (auto *ressource : Ressources)
+            for (auto *ressource : Resources)
             {
                 delete ressource;
             }
-            Ressources.clear();
+            Resources.clear();
 
-            for (const auto *ressource : other.Ressources)
+            for (const auto *ressource : other.Resources)
             {
-                Ressources.push_back(new Ressource(*ressource));
+                Resources.push_back(new Resource(*ressource));
             }
         }
 
