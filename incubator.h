@@ -12,7 +12,7 @@ class incubator{
     std::list<Mentor> mentors;
 
     public:
-    incubator();
+    incubator(){}
     ~incubator(){
         startups.clear();
         mentors.clear();
@@ -37,6 +37,9 @@ class incubator{
             std::advance(it, i);
             return *it;
         } 
+    }
+    std::list<Startup> getAllStartups(){
+        return startups;
     }
     Mentor getMentor(int i){
          if (i < mentors.size()) {
