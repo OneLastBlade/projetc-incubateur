@@ -1,11 +1,14 @@
 #ifndef INCUBATOR_H
 #define INCUBATOR_H
 
+#include <typeinfo>
 #include <bits/stdc++.h>
 #include "Startup.h"
 #include "Mentor.h"
 #include <list>
 #include "Resource.h"
+#include "ResourceHumaine.h"
+#include "ResourceMateriel.h"
 
 class incubator{
     private:
@@ -18,6 +21,31 @@ class incubator{
     ~incubator(){
         startups.clear();
         mentors.clear();
+
+        for(auto r:resources){
+            delete r;
+        }
+        resources.clear();
+    }
+
+    void addResource(Resource& r){
+        Resource* res;
+        if(typeid(r)==typeid(Resource)) res = new Resource(r);
+        else if(typeid(r)==typeid(ResourceMateriel)) res = new ResourceMateriel(static_cast<const ResourceMateriel&>(r));
+        else if(typeid(r)==typeid(ResourceHumaine)) res = new ResourceHumaine(static_cast<const ResourceHumaine&>(r));
+        resources.push_back(res);
+    }
+
+    void deleteResource(int i){
+        resources.erase(resources.begin()+i);
+    }
+
+    void allocateResource(){
+        // here you should call the class reservation 
+    }
+
+    void deallocateResource(){
+        // here you should delete a reservation 
     }
 
     void ajoutStartup(Startup s){
