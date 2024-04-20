@@ -10,17 +10,19 @@
 class Reservation {
 private:
 
-    Date date;
+    Date startDate , endDate;
     Projet* projet;
     bool isEvent;
     Event* evenement;
     Resource* ressource;
 
 public:
-    Reservation(Date date, Projet* projet, Resource* ressource);
+    Reservation(Date startdate,Date enddate, Projet* projet, Resource* ressource);
     Reservation(Date date, Event* evenement, Resource* ressource);
     bool isThisEvent();
     Date dateEvent();
+    bool isInDateRange(Date);
+    Resource* getResource();
 };
 
 #endif // RESERVATION_H_INCLUDED

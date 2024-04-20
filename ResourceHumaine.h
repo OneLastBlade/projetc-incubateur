@@ -6,15 +6,15 @@
 
 class ResourceHumaine : public Resource {
 private:
-    std::string nom;
     std::string fonction;
     std::vector<Competence> competences;
 
 public:
-    ResourceHumaine(const std::string& nom, const std::string& fonction);
+    ResourceHumaine(const std::string& nom,const bool& disponibilite=true , const std::string& fonction):Resource(nom , disponibilite),fonction(fonction){}
 
-    void ajouterCompetence(const Competence& competence);
+    void ajouterCompetence(const Competence& competence){
+        competences.push_back(competence);
+    }
 };
-
 
 #endif // RESSOURCEHUMAINE_H_INCLUDED

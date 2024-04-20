@@ -7,7 +7,14 @@ private:
     std::string domaine;
 
 public:
-    Competence(const std::string& domaine);
+    Competence(const std::string& domaine=""):domaine(domaine){}
+
+    std::string getDomaine(){
+        return domaine;
+    }
+    std::string setDomaine(std::string s){
+        domaine =s;
+    }
 
 };
 

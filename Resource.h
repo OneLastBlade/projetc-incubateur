@@ -10,7 +10,7 @@ protected:
     bool disponibilite;
 
 public:
-    Resource(const std::string& nom,const bool& disponibilite):nom(nom),disponibilite(disponibilite){}
+    Resource(const std::string& nom,const bool& disponibilite=true):nom(nom),disponibilite(disponibilite){}
     ~Resource(){}
 
     std::string getName(){
@@ -22,6 +22,8 @@ public:
     void changeDispo(bool b){
         disponibilite = b;
     }
+
+    //virtual void display() const = 0; 
 };
 
 #endif // RESSOURCE_H_INCLUDED

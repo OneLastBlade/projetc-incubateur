@@ -12,6 +12,7 @@
 #include "Reservation.h"
 #include "Events.h"
 
+
 class incubator{
     private:
     std::list<Startup> startups;
@@ -30,7 +31,28 @@ class incubator{
         }
         resources.clear();
     }
+    void addReservation(Reservation r){
+        if(!checkForReservation(r.dateEvent(),r.getResource())){
+            reservations.push_back(r);
+        }
+    }
 
+    void addReservation(Reservation r){
+        if(!checkForReservation(r.dateEvent(),r.getResource())){
+            reservations.push_back(r);
+        }
+    }
+
+    bool checkForReservation(Date d , Resource* r){
+        
+        for(auto p:reservations){
+
+            if(p.isInDateRange(d)){
+                if(p.getResource()==r) return true;
+            }
+        }
+        return false;
+    }
     void addResource(Resource& r){
         Resource* res;
         if(typeid(r)==typeid(Resource)) res = new Resource(r);
