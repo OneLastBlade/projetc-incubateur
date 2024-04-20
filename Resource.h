@@ -23,6 +23,10 @@ public:
         disponibilite = b;
     }
 
+    virtual std::string getInfo(){
+        return nom;
+    }
+
     //virtual void display() const = 0; 
 };
 

@@ -11,7 +11,7 @@
 #include "ResourceMateriel.h"
 #include "Reservation.h"
 #include "Events.h"
-
+#include "Finance.h"
 
 class incubator{
     private:

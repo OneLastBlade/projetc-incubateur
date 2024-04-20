@@ -10,20 +10,21 @@ Projet& Projet::operator=(const Projet& other)
             nom = other.nom;
             objectif = other.objectif;
             status = other.status;
+            f= other.f;
         }
 
         return *this;
     }
 
     void Projet::addExpense(float a){
-        expenses+=a;
+       f.addExepense(a);
     }
     void Projet::addRevenue(float a){
-        revenue+=a;
+        f.addRevenue(a);
     }
     float Projet::getExpenses(){
-        return expenses;
+        return f.getExpenses();
     }
     float Projet::getRevenue(){
-        return revenue;
+        return f.getRevenues();
     }

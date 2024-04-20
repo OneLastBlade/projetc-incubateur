@@ -15,6 +15,11 @@ public:
     void ajouterCompetence(const Competence& competence){
         competences.push_back(competence);
     }
+
+    std::string getInfo() override{
+        return getName()+" "+fonction;
+    }
+
 };
 
 #endif // RESSOURCEHUMAINE_H_INCLUDED

@@ -9,6 +9,10 @@ private:
 
 public:
     ResourceMateriel(const std::string& nom,const bool& disponibilite, const std::string& type):Resource(nom,disponibilite),type(type){}
+
+    std::string getInfo() override {
+        return getName()+" "+type;
+    }
 };
 
 #endif // RESSOURCEMATERIEL_H_INCLUDED
