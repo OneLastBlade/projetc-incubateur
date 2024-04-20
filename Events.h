@@ -9,18 +9,17 @@
 class Events
 {
 private:
+    static std::map<Date, Event> eventMap;
     
 public:
-    static std::map<std::string, Event> eventMap;
     Events() {}
 
-    static void addEvent(const std::string& name, const std::string& place, const Date& date);
-
-    static void deleteEvent(const std::string& name);
+    static void addEvent(const std::string& name, const std::string& place,  Date& date);
+    
+    static void deleteEvent( Date& date);
 
     static void displayAllEvents();
 };
 
-std::map<std::string, Event> Events::eventMap;
 
-#endif EVENTS_H
+#endif
