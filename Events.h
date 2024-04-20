@@ -9,9 +9,9 @@
 class Events
 {
 private:
-    static std::map<std::string, Event> eventMap;
-
+    
 public:
+    static std::map<std::string, Event> eventMap;
     Events() {}
 
     static void addEvent(const std::string& name, const std::string& place, const Date& date);

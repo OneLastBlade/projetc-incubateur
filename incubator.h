@@ -9,12 +9,15 @@
 #include "Resource.h"
 #include "ResourceHumaine.h"
 #include "ResourceMateriel.h"
+#include "Reservation.h"
+#include "Events.h"
 
 class incubator{
     private:
     std::list<Startup> startups;
     std::list<Mentor> mentors;
     std::vector <Resource*> resources;
+    std::vector <Reservation> reservations;
 
     public:
     incubator(){}

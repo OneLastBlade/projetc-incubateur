@@ -1,10 +1,10 @@
 #include <iostream>
-#include "incubator.h"
+#include "Events.h"
 using namespace std;
 
 int main()
 {
-    incubator c();
+
 
     
     
