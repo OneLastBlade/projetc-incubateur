@@ -12,7 +12,7 @@ public:
     std::string getDomaine(){
         return domaine;
     }
-    std::string setDomaine(std::string s){
+    void setDomaine(std::string s){
         domaine =s;
     }
 

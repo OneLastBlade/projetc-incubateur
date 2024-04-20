@@ -31,18 +31,19 @@ class incubator{
         }
         resources.clear();
     }
-    void addReservation(Reservation r){
+
+    bool addReservation(Reservation r){
         if(!checkForReservation(r.dateEvent(),r.getResource())){
             reservations.push_back(r);
-        }
+            return true;
+        }else return false;
     }
 
-    void addReservation(Reservation r){
-        if(!checkForReservation(r.dateEvent(),r.getResource())){
-            reservations.push_back(r);
+    void deleteReservation(int i ){
+        if(reservations.begin()+i<= reservations.end()){
+        reservations.erase(reservations.begin()+i);
         }
     }
-
     bool checkForReservation(Date d , Resource* r){
         
         for(auto p:reservations){
