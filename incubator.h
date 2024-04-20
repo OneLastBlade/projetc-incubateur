@@ -31,7 +31,9 @@ class incubator{
         }
         resources.clear();
     }
-
+    std::vector <Resource*> getResources(){
+        return resources;
+    }
     bool addReservation(Reservation r){
         if(!checkForReservation(r.dateEvent(),r.getResource())){
             reservations.push_back(r);
