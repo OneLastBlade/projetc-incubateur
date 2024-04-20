@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include<vector>
 
 class Events
 {
@@ -19,6 +20,8 @@ public:
     static void deleteEvent( Date& date);
 
     static void displayAllEvents();
+    
+    static std::vector<Event> getAllEvents();
 };
 
 

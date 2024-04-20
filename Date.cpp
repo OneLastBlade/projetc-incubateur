@@ -28,6 +28,11 @@ void Date::setYear(int _year) {
 void Date::display()  {
     std::cout << day << "/" << month << "/" << year << std::endl;
 }
+
+std::string Date::getFullDate(){
+
+    return std::to_string(day) + "/" + std::to_string(month) + "/" + std::to_string(year);
+}
 #include "Date.h"
 
 std::ostream& operator<<(std::ostream& os, const Date& date) {

@@ -1,5 +1,6 @@
 #include "Events.h"
 #include <iostream>
+#include<vector>
 
 std::map<Date, Event> Events::eventMap;
 
@@ -24,4 +25,17 @@ void Events::displayAllEvents() {
         //event.getDate().display(); // Assuming Date has a display() method
         std::cout << std::endl;
     }
+}
+std::vector<Event> Events::getAllEvents()
+{
+    std::vector<Event> allEvents;
+    
+    // Iterate over the eventMap and collect events
+    for (const auto& pair : eventMap)
+    {
+        const Event& event = pair.second;
+        allEvents.push_back(event);
+    }
+    
+    return allEvents;
 }
