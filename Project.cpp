@@ -10,18 +10,6 @@ Projet& Projet::operator=(const Projet& other)
             nom = other.nom;
             objectif = other.objectif;
             status = other.status;
-
-            // Copy the Ressources
-           /* for (auto *ressource : Resources)
-            {
-                delete ressource;
-            }
-            Resources.clear();
-
-            for (const auto *ressource : other.Resources)
-            {
-                Resources.push_back(new Resource(*ressource));
-            }*/
         }
 
         return *this;
