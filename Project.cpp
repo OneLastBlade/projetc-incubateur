@@ -12,7 +12,7 @@ Projet& Projet::operator=(const Projet& other)
             status = other.status;
 
             // Copy the Ressources
-            for (auto *ressource : Resources)
+           /* for (auto *ressource : Resources)
             {
                 delete ressource;
             }
@@ -21,7 +21,7 @@ Projet& Projet::operator=(const Projet& other)
             for (const auto *ressource : other.Resources)
             {
                 Resources.push_back(new Resource(*ressource));
-            }
+            }*/
         }
 
         return *this;
