@@ -8,7 +8,7 @@
         name = _name;
     }
 
-    std::string User::getNumber()  {
+    std::string User::getNumber() const  {
         return number;
     }
 
@@ -16,7 +16,7 @@
         number = _number;
     }
 
-    std::string User::getAddress()  {
+    std::string User::getAddress()  const{
         return address;
     }
 

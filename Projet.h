@@ -9,12 +9,16 @@ class Projet
 {
 private:
     std::string nom;
-    
     //float expenses=0,revenue=0;
     std::string objectif;
     std::string status;
     Finance f;
 public:
+    Projet(){
+        nom="";
+        objectif="";
+        status="";
+    }
     Projet(const std::string &nom, const std::string &objectif, const std::string &status);
 
     Projet(const Projet &other)
@@ -23,7 +27,7 @@ public:
 
     }
 
-    std::string getName(){
+    std::string getName()const{
         return nom;
     }
     std::string getObjectif(){
@@ -35,8 +39,11 @@ public:
     Projet& operator=(const Projet& other);
     void addExpense(float a);
     void addRevenue(float a);
-    float getExpenses();
-    float getRevenue();
+    float getExpenses() const;
+    float getRevenue()const;
+
+    friend std::ostream& operator<<(std::ostream& os, const Projet& p);
+    friend std::istream& operator>>(std::istream& is, Projet& p);
 };
 
 #endif // PROJET_H_INCLUDED

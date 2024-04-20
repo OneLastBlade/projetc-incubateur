@@ -22,9 +22,22 @@ Projet& Projet::operator=(const Projet& other)
     void Projet::addRevenue(float a){
         f.addRevenue(a);
     }
-    float Projet::getExpenses(){
+    float Projet::getExpenses() const{
         return f.getExpenses();
     }
-    float Projet::getRevenue(){
+    float Projet::getRevenue() const{
         return f.getRevenues();
     }
+std::ostream& operator<<(std::ostream& os,const Projet& p) {
+    os << p.nom << " " << p.objectif << " " << p.status << " " << p.getExpenses() << " " << p.getRevenue();
+    return os;
+}
+
+std::istream& operator>>(std::istream& is, Projet& p) {
+    is >> p.nom >> p.objectif >> p.status;
+    float expenses, revenue;
+    is >> expenses >> revenue;
+    p.addExpense(expenses);
+    p.addRevenue(revenue);
+    return is;
+}

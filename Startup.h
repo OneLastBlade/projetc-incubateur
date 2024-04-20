@@ -13,7 +13,10 @@ private:
     std::vector<Projet> Projets;
 
 public:
-    Startup(const std::string &_name, int _age, const std::string &_number, const std::string &_address,
+    Startup(){
+        domain="";
+    }
+    Startup(const std::string &_name, const std::string &_number, const std::string &_address,
             const std::pair<double, double> &_coordinates, const std::string &_domain);
     Startup &operator=(const Startup &other);
     Startup(const Startup &other);
@@ -50,6 +53,8 @@ public:
     std::vector<Projet> getProjectsVector(){
         return Projets;
     }
+    friend std::ostream& operator<<(std::ostream& os, const Startup& s);
+    friend std::istream& operator>>(std::istream& is, Startup& s);
 };
 
 #endif // STARTUP_H
