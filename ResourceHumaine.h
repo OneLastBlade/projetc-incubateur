@@ -10,7 +10,7 @@ private:
     std::vector<Competence> competences;
 
 public:
-    ResourceHumaine(const std::string& nom,const bool& disponibilite=true , const std::string& fonction):Resource(nom , disponibilite),fonction(fonction){}
+    ResourceHumaine(const std::string& nom,const bool& disponibilite , const std::string& fonction):Resource(nom , disponibilite),fonction(fonction){}
 
     void ajouterCompetence(const Competence& competence){
         competences.push_back(competence);
