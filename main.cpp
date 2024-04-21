@@ -13,23 +13,23 @@ int main()
         //Projet p;
         incubator b;
         Startup s;
-        cin>>s;
-        
+//        cin>>s;
+
         //b.ajoutStartup(s);
         //b.saveToFile("startup_data.txt");
         //b.ajoutStartup(s);
-        b.loadFromFile("startup_data.txt");
+       // b.loadFromFile("startup_data.txt");
 
         cout<< b.startupSize();
-        
-        
+
+
         //cin >>p;
         //cout<<"-----------------";
         //cout<<p;
         //cout<<d<<endl;
         //Events::displayAllEvents();
 
-    
-    
+
+
     return 0;
 }

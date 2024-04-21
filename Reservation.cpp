@@ -20,3 +20,9 @@
         if(startDate<=d && endDate>=d)return true;
         else return false;
     }
+    Date Reservation::getStartDate(){
+        return startDate;
+    }
+    Date Reservation::getEndDate(){
+        return endDate;
+    }

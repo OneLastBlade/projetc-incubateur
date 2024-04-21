@@ -19,10 +19,13 @@ private:
 public:
     Reservation(Date startdate,Date enddate, Projet* projet, Resource* ressource);
     Reservation(Date date, Event* evenement, Resource* ressource);
+    Date getStartDate();
+    Date getEndDate();
+    Resource* getResource();
     bool isThisEvent();
     Date dateEvent();
     bool isInDateRange(Date);
-    Resource* getResource();
+    
 };
 
 #endif // RESERVATION_H_INCLUDED

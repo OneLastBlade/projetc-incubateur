@@ -42,7 +42,7 @@ public:
             file << startup;
         }
     }
-    void loadFromFile(const std::string &filename)
+   /* void loadFromFile(const std::string &filename)
     {
         std::ifstream file(filename);
         Startup p;
@@ -51,7 +51,7 @@ public:
             startups.push_back(p);
         }
         //return st;
-    }
+    }*/
 
     std::vector<Resource *> getResources()
     {
@@ -59,13 +59,13 @@ public:
     }
     bool addReservation(Reservation r)
     {
-        if (!checkForReservation(r.dateEvent(), r.getResource()))
-        {
+        //if (!checkForReservation(r.dateEvent(), r.getResource()))
+        //{
             reservations.push_back(r);
             return true;
-        }
-        else
-            return false;
+        //}
+        //else
+           // return false;
     }
 
     void deleteReservation(int i)
